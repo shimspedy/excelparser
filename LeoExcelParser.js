@@ -1,4 +1,4 @@
-	let stateVal = 'SD';
+	let stateVal = '';
 	//set the LOCNAME field 
 	const stateKey = 'LOCNAME';
 	//table container ID 
