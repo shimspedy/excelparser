@@ -24,6 +24,14 @@
 							<p>General Schedule locality region applies to government employees who work in surrounding areas. General Schedule employees who work within this region are paid 44.15% more than the GS base pay rates to account for local cost of living.</p>
 							
 						</div>
+
+
+
+						<div class="panel-body" id="Table-container2">
+							<p>General Schedule locality region applies to government employees who work in surrounding areas. General Schedule employees who work within this region are paid 44.15% more than the GS base pay rates to account for local cost of living.</p>
+							
+						</div>
+
 					</div>
 				</div>
 			</div>
@@ -40,4 +48,13 @@
 		// change the file path "leoRayExcel" "gsRayExcel" variable and stateParam
 		loadExcelFile(leoRayExcel, stateParam, 'Table-container');
 	</script>
+	<script type="text/javascript">
+		//this variable is state value to show
+	// const stateParam = new URLSearchParams(window.location.search).get('stateVal');
+	const stateParam2 = "SD"
+	//you can call the Excel file loading function of the ExcelParser.js
+
+	// change the file path "leoRayExcel" "gsRayExcel" variable and stateParam
+	loadExcelFile(leoRayExcel, stateParam2, 'Table-container2');
+</script>
 </html>
