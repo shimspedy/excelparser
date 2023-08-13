@@ -141,9 +141,9 @@
 				var strTR = '';
 				element.anualTable.forEach((aItem, aIndex) => {
 					if(aIndex == 0){
-						strTR += `<tr class="table-primary"><td>State</td>`;	
+						// strTR += `<tr class="table-primary"><td>State</td>`;	
 					}else{
-						strTR += `<tr><td>${element.state}</td>`;
+						// strTR += `<tr><td>${element.state}</td>`;
 					}
 					
 					aItem.forEach((cItem, cIndex ) => {
