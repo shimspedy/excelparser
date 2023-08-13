@@ -59,8 +59,8 @@
 			//this variable is state value to show
 		const stateParam = new URLSearchParams(window.location.search).get('stateVal');
 		//you can call the Excel file loading function of the ExcelParser.js
-		loadExcelFile(gsRayExcel, stateParam, 'Table-container');
-		loadExcelFile(leoRayExcel, stateParam, 'Table-container-end');
+		loadExcelFile(gsRayExcel, "SF", 'Table-container');
+		loadExcelFile(leoRayExcel, "LA", 'Table-container-end');
 		loadExcelFile(leoRayExcel, "SD", 'Table-container-2');
 
 	</script>
