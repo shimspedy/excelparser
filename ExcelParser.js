@@ -1,12 +1,12 @@
-	let stateVal = '';
+	//let stateVal = '';
 	//set the LOCNAME field 
 	const stateKey = 'LOCNAME';
 	//table container ID 
-	let tableContainerID = 'GSTable-container';
+	//let tableContainerID = 'GSTable-container';
 	//load excel file logic
 	function  loadExcelFile(excelFilePath, state, tableElementID) {
-		tableContainerID = tableElementID;
-		stateVal = state;
+		//tableContainerID = tableElementID;
+		//stateVal = state;
 		var sheetData = [];
 
 		fetch(excelFilePath)
@@ -37,7 +37,7 @@
 			    });
 		        
 		        var json_object = JSON.stringify(XL_row_object);
-		        analyzeExcelSheet(sheetData);
+		        analyzeExcelSheet(sheetData, state, tableElementID);
 		      })
 
 		    };
@@ -52,7 +52,7 @@
 	}
 
 	//Excel file data parse/analize logic
-	function analyzeExcelSheet(sheetData) {
+	function analyzeExcelSheet(sheetData, stateVal, tableContainerID) {
 		var stateList = [];
 		var stateSheets = [];
 		var sheetKeys = [];
@@ -86,10 +86,10 @@
 					
 				});
 		});
-		buildAnualTable(stateSheets);
+		buildAnualTable(stateSheets, stateVal, tableContainerID);
 	}
 	//Make the GS anunal Table Data from excel Sheet data
-	function buildAnualTable(stateSheetData){
+	function buildAnualTable(stateSheetData, stateVal, tableContainerID){
 
 		var keyWord = 'annual';
 		
@@ -119,11 +119,11 @@
 			});
 			stateData.anualTable = anualTable;
 		});
-		ExcelRender(stateSheetData);
+		ExcelRender(stateSheetData, stateVal, tableContainerID);
 	}
 
 	//Render Table from the sheet data
-	function ExcelRender(stateSheet){
+	function ExcelRender(stateSheet, stateVal, tableContainerID){
 		var stateKey = stateVal? stateVal.toLowerCase() : "";
 
 		var viewSheets = stateSheet;
